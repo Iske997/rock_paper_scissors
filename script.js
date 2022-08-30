@@ -5,12 +5,6 @@ function getComputerChoice() {
   return gameArray;
 };
 
-
-let playerSelection = prompt("Choose one: Rock, Paper or Scissors");
-console.log(playerSelection);
-let computerSelection = getComputerChoice();
-console.log(computerSelection);
-
 function playRound(param1, param2) {
   if (param1 === "Rock" && param2 === "Rock") {
     return "Its a draw";
@@ -32,5 +26,11 @@ function playRound(param1, param2) {
     return "You Win! Scissors beats Paper";}
 };
 
-let result = playRound(playerSelection, computerSelection);
-console.log(result);
+for (let i = 0; i < 5; i++) {
+  let playerSelection = prompt("Choose one: Rock, Paper, Scissors");
+  console.log("You choose: " + playerSelection);
+  let computerSelection = getComputerChoice();
+  console.log("Computers selection: " + computerSelection);
+  let result = playRound(playerSelection, computerSelection);
+  console.log(result);
+}
