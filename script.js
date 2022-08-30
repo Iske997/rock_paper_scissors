@@ -38,6 +38,7 @@ function playRound(param1, param2) {
 function game() {
   for (let i = 0; i < 5; i++) {
     let playerSelection = prompt("Choose one: Rock, Paper, Scissors");
+    playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1);
     console.log("You choose: " + playerSelection);
     let computerSelection = getComputerChoice();
     console.log("Computers selection: " + computerSelection);
